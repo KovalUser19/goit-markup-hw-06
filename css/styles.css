@@ -94,7 +94,7 @@ padding-top: 96px;
 
 .header{
   border-bottom: 1px solid var(--cornflower, #E7E9FC);
-  max-width: 1440px;
+ /*max-width: 1440px;*/
   margin: 0 auto;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
@@ -116,6 +116,11 @@ padding-top: 96px;
   align-items: center;
   gap: 40px;
 }
+@media only screen and (max-width: 767px) {
+   .address, .nav .list{
+    display: none;
+  }
+}
 .link{
   transition-property: color;
   transition-duration: 250ms;
@@ -136,6 +141,10 @@ padding-top: 96px;
     margin-right: 76px;
     padding-top: 24px;
     padding-bottom: 24px;
+}
+.nav .link{
+  padding-top: 25.5px;
+  padding-bottom: 23.5px;
 }
 .dark-link{
  color: var(--title-color);
@@ -185,16 +194,47 @@ gap: 40px;
 /*-----------hero-----------*/
 
 .hero{
-  min-width: 320px;
-  max-width: 428px;
-  margin: 0 auto;
+  max-width: 1440px;
+
   background-color:var(--bg-color);
-  background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/people-office.jpg);
+  background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/mob@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+
+/*--------- @media hero image --------*/
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx){
+ .hero{
+  background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/mob@2x.jpg);
+ }
+}
+@media only screen and (min-width: 428px) {
+   .hero{
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/tab@1x.jpg);
+  }
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx){
+  .hero{
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/tab@2x.png);
+  }
+}
+@media only screen and (min-width: 768px) {
+   .hero{
+
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/dexs@1x.jpg);
+  }
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx){
+.hero{
+  background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/dexs@2x.png);
+}
+}
+
+
 .container-hero{
+
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -242,7 +282,7 @@ background-color: var(--color-ocean);
 
 @media only screen and (min-width: 768px) {
   .hero{
-    max-width: 768px;
+     max-width: 768px;
   }
  .main-title{
    max-width: 496px;
@@ -260,6 +300,7 @@ background-color: var(--color-ocean);
 
 @media only screen and (min-width: 1440px) {
  .hero{
+  max-width: 1440px;
     padding: 188px 0;
     max-width: 1440px;
   }
@@ -680,16 +721,11 @@ border-bottom: 1px solid var(--cornflower);
   padding: 100px 0;
   background-color: var(--bg-color);
 }
-.footer-container{
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 .footerblok{
   display: block;
-  text-align: left;
+  margin: 0 auto;
+  text-align: center;
   margin-bottom: 72px;
 }
 .link-web {
@@ -705,7 +741,10 @@ border-bottom: 1px solid var(--cornflower);
   align-items: center;
 }
 .footer-text {
-  max-width: 264px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  width: 264px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -825,27 +864,23 @@ margin-left: 16px;
 /* @media footer 768px */
 
 @media only screen and (min-width: 768px) {
-  .subscribe-container {
-    padding-left: 108px;
-  }
-
+  .footer {
+      padding: 96px 108px;
+    }
   .footer-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
+    text-align: left;
   }
   .footerblok{
+    margin-left: 0;
     margin-right: 24px;
-  }
-  .footer{
-   padding: 96px 0;
+    text-align: left;
   }
   .footer-form{
     width: 100%;
-    display: flex;
     flex-direction: row;
-
    justify-content: start;
     align-items:start;
     gap: 24px;
@@ -876,8 +911,7 @@ margin-left: 16px;
     margin-bottom: 0;
   }
   .footerblok{
-    margin-bottom: 100px;
-    margin-right: 120px;
+    margin-bottom: 0;
   }
   .foter-title{
      text-align: start;
