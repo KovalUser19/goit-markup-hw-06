@@ -102,11 +102,9 @@ padding-top: 96px;
   }
 .header-container{
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 .nav{
   display: flex;
@@ -186,7 +184,7 @@ display: flex;
 font-style: normal;
 gap: 40px;
 }
-
+/*
 @media only screen and (min-width: 768px) {
 .address-list{
   flex-direction: column;
@@ -194,9 +192,10 @@ gap: 40px;
 }
 nav .link-web{
   margin-right: 120px;
-  padding: 24px 0;
+  padding: 25.5px 0;
 }
-}
+} */
+
 .address-item {
   font-size: 16px;
   line-height: 1.5;
@@ -208,7 +207,19 @@ nav .link-web{
   background: none;
   border: none;
 }
-
+/* @media only screen and (min-width: 1440px) {
+  .header-container{
+  max-width: 1440px;
+  }
+  nav .link-web{
+    margin-right: 76px;
+  }
+  .address-list{
+   flex-direction: row;
+   gap: 40px;
+   margin-right: auto;
+  }
+} */
 /*-----------hero-----------*/
 
 .hero{
@@ -1159,20 +1170,16 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 /* -------Mobail menu ------*/
 
 .menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
+  min-height: 32px;
+  min-width: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  margin: 0;
   padding: 0;
   background-color: transparent;
-  cursor: pointer;
   border: none;
-  border-radius: 50%;
   outline: none;
-
 }
 
 @media (min-width: 768px) {
@@ -1180,18 +1187,18 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: none;
   }
 }
-
 .menu-toggle:hover,
 .menu-toggle:focus {
   background-color: rgba(0, 0, 0, 0.1);
-}
-
+}d
 .menu-container {
   position: fixed;
-  top: 0;
+   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
   padding-top: 80px;
   padding-left: 40px;
   padding-bottom: 40px;
@@ -1208,13 +1215,13 @@ background: var(--white, #FFF);
 
 .menu-container .menu-toggle {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  color: #fff;
-
+  top: 24px;
+  right: 24px;
+ border-radius: 50%;
+ background-color: #E7E9FC;
 }
 .mobile{
-  margin-bottom: 284px;
+  margin-bottom: auto;
 }
 .mobile-menu {
   display: inline-flex;
@@ -1243,7 +1250,7 @@ color: var(--ocean, #404BBF);
   justify-content:start;
 }
 .mobile-address{
-  margin-bottom: 48px;
+  padding-bottom: 48px;
 }
 .mobile-address-list{
   display: inline-flex;
