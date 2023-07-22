@@ -132,11 +132,10 @@ section{
    color:#4D5AE5;
    margin-right: 76px;
    font-family: 'Raleway', sans-serif;
-
 }
 .nav .link{
-  padding-top: 25.5px;
-  padding-bottom: 23.5px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .dark-link{
  color: var(--title-color);
@@ -160,13 +159,12 @@ section{
   content: "";
   display: block;
   position: absolute;
-  bottom: 1px;
+  bottom: -1px;
   left: 0;
   width: 100%;
   height: 4px;
   border-radius: 2px;
   background: var(--color-ocean);
-  margin-bottom: 0px;
 }
 .address{
 margin-left: auto;
@@ -253,6 +251,7 @@ nav .link-web{
 }
 .hero{
   padding: 112px 0;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/people-office.jpg);
 }
 .container-hero{
   display: block;
@@ -300,7 +299,7 @@ background-color: var(--color-ocean);
 /*@media hero 768px*/
 
 @media only screen and (min-width: 768px) {
-  .hero{
+  .container-hero{
     max-width: 768px;
   }
  .main-title{
@@ -316,9 +315,11 @@ background-color: var(--color-ocean);
 /* @media hero 1158px */
 
 @media only screen and (min-width: 1158px) {
- .hero{
-  max-width: 1158px;
+  .hero{
     padding: 188px 0;
+  }
+ .container-hero{
+   max-width: 1158px;
   }
   .main-title{
     max-width: 496px;
